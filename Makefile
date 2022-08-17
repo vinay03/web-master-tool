@@ -1,4 +1,5 @@
 test:
 	go test ./tools/benchmark
 build:
-	go build . ./bin/wmt
+	go build main.go
+	mv ./main ./bin/wmt
