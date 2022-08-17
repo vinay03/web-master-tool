@@ -13,5 +13,11 @@ func Test_visitWebsite(t *testing.T) {
 }
 
 func Test_Start(t *testing.T) {
+	recordTotalDuration := totalDuration
+	Start("https://www.facebook.com", 15)
 
+	newTotalDuration := totalDuration
+	if recordTotalDuration == newTotalDuration {
+		t.Fail()
+	}
 }
